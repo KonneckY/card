@@ -26,6 +26,12 @@ body{
 .bird-img{
     height: 30%;
     width: 30%;
+    /* animation: animacja 5s infinite; */
+    left: 0%;
+    position: absolute;
+    --ml : 0px;
+    transform:  translate(var(--ml));
+    transition: 0.3s;
 }
 .card{
     display: grid;
@@ -54,6 +60,7 @@ grid-area: main ;
 display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .foot{
     grid-area: foot;
