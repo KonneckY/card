@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+
+*{
+    margin: 0%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(green,yellow);
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    width: 20%;
+    height: 50%;
+    border-radius: 2%;
+    box-shadow: 1px 1px 5px 5px;
+    
+}
+.title{
+    font-size: 2rem;
+    font-family: 'Krona One', sans-serif;
+}
+.bird-img{
+    height: 30%;
+    width: 30%;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(5,20%);
+    grid-template-areas:
+    "head"
+    "main"
+    "main"
+    "main"
+    "foot" ;
+    height: 100%;
+    background-image: url("bg-card.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+grid-area: main ;
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot{
+    grid-area: foot;
+}
