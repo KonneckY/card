@@ -16,8 +16,8 @@ body{
     width: 20%;
     height: 50%;
     border-radius: 2%;
-    box-shadow: 1px 1px 5px 5px;
-    
+    box-shadow: 1px 1px 5px 5px;   
+    position: relative;
 }
 .title{
     font-size: 2rem;
@@ -26,12 +26,27 @@ body{
 .bird-img{
     height: 30%;
     width: 30%;
-    /* animation: animacja 5s infinite; */
     left: 0%;
     position: absolute;
     --ml : 0px;
     transform:  translate(var(--ml));
     transition: 0.3s;
+}
+.cardB{
+    position: absolute;
+    display: none;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(5,20%);
+    grid-template-areas:
+    "head"
+    "main"
+    "main"
+    "main"
+    "foot" ;
+    height: 50%;
+    width: 20%;
+    background-color: grey;
+    opacity: 80%;
 }
 .card{
     display: grid;
@@ -48,6 +63,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: width 2s, height 4s;
 }
 .header{
     grid-area: head;
@@ -64,4 +80,60 @@ display: flex;
 }
 .foot{
     grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5%;
+  }
+  .zamknij{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+  .headerB{
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mainB{
+grid-area: main ;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.footB{
+    grid-area: foot;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
 }
