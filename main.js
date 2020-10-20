@@ -6,8 +6,10 @@ const btn_open = document.querySelector(".btn");
 
 btn_open.addEventListener('click', function(){
     cardB.style.display = "grid";
+    cardB.style.animation = "scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
 });
-btn_close.addEventListener('click', function(){
+btn_close.addEventListener('click', function(){   
+    cardB.style.animation = "scale-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
     cardB.style.display = "none";
 });
 
