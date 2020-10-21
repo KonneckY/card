@@ -16,3 +16,19 @@ btn_close.addEventListener('click', function(){
 setInterval(() => {
     element.style.setProperty("--ml", Math.random() * 200 + "px");
 }, 300)
+
+const text = 'Flappy Bird!';
+const header = document.querySelector(".header");
+let index = 0;
+
+function writeText() {
+    header.innerText = text.slice(0, index);
+
+    index++;
+
+    if (index > text.length) {
+        index = 0;
+    }
+}
+
+setInterval(writeText, 200);
